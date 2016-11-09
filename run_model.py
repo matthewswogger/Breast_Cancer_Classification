@@ -73,8 +73,8 @@ d = {'true_positive':TP,'true_negative':TN,'false_positive':FP,'false_negative':
      'precision':precision,'recall':recall,'f1_score':f1}
 outcome_df = pd.DataFrame(data=d)
 
-print '######################################################'
-print '######################################################'
+print '#' * 40
+print '#' * 40
 print 'Model is: LinearSVC(C=0.01)'
 print '   Number of test cases: {}'.format(len(y_test))
 print 'Average False Positives: {}'.format(outcome_df.false_positive.mean())
