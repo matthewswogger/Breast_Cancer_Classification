@@ -48,7 +48,13 @@ for _ in xrange(100):
     # model
     model = LinearSVC(C=0.01).fit(X_train,y_train)
     scores = model.decision_function(X_test)
-    prediction = (scores > -0.13).astype(np.int)
+
+    # this is what I use to skew results away from false_negative
+    # the default in sklearn for this number is 0.0
+    threshold = -0.13
+    # threshold = 0.0
+
+    prediction = (scores > threshold).astype(np.int)
 
     tp, tn, fp, fn = 0, 0, 0, 0
     for num in zip(y_test, prediction):
