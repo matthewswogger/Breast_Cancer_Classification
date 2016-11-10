@@ -148,6 +148,7 @@ exploration.ipynb, it's a little cleaner than if I didn't delete anything but
 it's all in order and can be run from top to bottom without blowing up. If you
 just want to see my final model take a look at run_model.py, it outputs this:
 
+```python
 ########################################
 ########################################
 Model is: LinearSVC(C=0.01)
@@ -158,6 +159,7 @@ Average False Negatives: 1.29
       Average Precision: 0.97
          Average Recall: 0.97
       Average F-1 Score: 0.97
+```
 
 ![](graphs/graph.png)
 
